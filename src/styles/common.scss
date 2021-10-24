@@ -1,0 +1,56 @@
+.no-select {
+  user-select: none;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.transition {
+  transition: all 0.3s ease;
+}
+
+.text-xs {
+  font-size: 12px;
+}
+.text-sm {
+  font-size: 14px;
+}
+.text-md {
+  font-size: 16px;
+}
+.text-lg {
+  font-size: 18px;
+}
+.text-xl {
+  font-size: 20px;
+}
+.text-center {
+  text-align: center;
+}
+
+.radius-md {
+  border-radius: 4px;
+}
+.circle {
+  border-radius: 50%;
+}
+
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-ac {
+  align-items: center;
+}
+.flex-jc {
+  justify-content: center;
+}
+.flex-jb {
+  justify-content: space-between;
+}
+.flex-1 {
+  flex: 1;
+}

@@ -1,0 +1,41 @@
+@import './variables.scss';
+
+.app-title {
+  width: 100%;
+  height: 30px;
+  position: fixed;
+  z-index: 10000;
+  background-color: $deep-1;
+  padding-left: 15px;
+  -webkit-app-region: drag;
+  .app-name {
+    color: $light-2;
+  }
+  .app-opts {
+    -webkit-app-region: no-drag;
+    .settings,
+    .minimize,
+    .close {
+      width: 40px;
+      color: $light-3;
+      i {
+        color: $light-3;
+        line-height: 30px;
+      }
+      &:hover {
+        color: $light-1;
+        background-color: $deep-3;
+        i {
+          color: $light-1;
+        }
+      }
+    }
+    .settings-active {
+      color: $light-1 !important;
+      background-color: $blue-1 !important;
+      i {
+        color: $light-1 !important;
+      }
+    }
+  }
+}

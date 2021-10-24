@@ -1,0 +1,17 @@
+@import './variables.scss';
+
+.task-list {
+  width: 100%;
+  height: calc(100% - 80px);
+  padding: 10px 0;
+  // position: absolute;
+  // top: 80px;
+  overflow-y: auto;
+  .blank-tip {
+    width: 100%;
+    margin-top: 100px;
+    svg {
+      width: 100%;
+    }
+  }
+}

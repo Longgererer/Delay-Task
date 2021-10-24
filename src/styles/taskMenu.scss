@@ -1,0 +1,23 @@
+@import './variables.scss';
+
+.test-menu {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background-color: $deep-3;
+  z-index: 1000;
+  box-shadow: 0 2px 4px $deep-1;
+  .menu-content {
+    padding: 4px 0;
+    li {
+      font-size: 14px;
+      color: $light-3;
+      transition: all 0.3s ease;
+      padding: 5px 10px;
+      cursor: pointer;
+      &:hover {
+        background-color: $deep-5;
+      }
+    }
+  }
+}

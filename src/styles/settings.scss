@@ -1,0 +1,97 @@
+@import './variables.scss';
+
+.app-settings {
+  width: 100%;
+  height: calc(100% - 30px);
+  position: fixed;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: -100%;
+  backdrop-filter: blur(10px);
+  padding: 20px 15px;
+  .notification {
+    .notification-header {
+      .title {
+        color: $light-1;
+      }
+    }
+    .description {
+      color: $light-4;
+    }
+    .notification-radio-group {
+      display: none;
+      .notification-radio {
+        margin-top: 10px;
+        input {
+          width: 16px;
+          height: 16px;
+          opacity: 0;
+        }
+        label {
+          left: 5px;
+          top: 3px;
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+          border: 2px solid $deep-5;
+        }
+        .radio-active {
+          border: 5px solid $blue-1;
+        }
+      }
+    }
+    .notification-radio-group-active {
+      display: block;
+    }
+  }
+  .about {
+    color: $light-1;
+    margin-top: 15px;
+    .title {
+      margin-bottom: 15px;
+    }
+    .version,
+    .contribute {
+      margin-bottom: 10px;
+    }
+    .version {
+      .version-tag {
+        color: $light-4;
+      }
+    }
+    .contribute {
+      .github {
+        color: $blue-2;
+        text-decoration: underline;
+      }
+    }
+  }
+  .other {
+    color: $light-1;
+    margin-top: 15px;
+    .title {
+      margin-bottom: 15px;
+    }
+    .open-at-login,
+    .def-settings {
+      margin-bottom: 10px;
+    }
+    .def-settings,
+    .delete-all-tasks {
+      button {
+        border: none;
+        background-color: $deep-2;
+        padding: 5px 10px;
+        color: $light-4;
+        &:hover {
+          background-color: $deep-5;
+          color: $light-1;
+        }
+      }
+    }
+  }
+}
+
+.app-settings-active {
+  top: 30px;
+}

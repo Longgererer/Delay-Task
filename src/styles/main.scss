@@ -1,0 +1,9 @@
+@import './variables.scss';
+
+.main {
+  width: 100%;
+  height: calc(100% - 30px);
+  position: relative;
+  top: 30px;
+  padding: 20px 15px;
+}

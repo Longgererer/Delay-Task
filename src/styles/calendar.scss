@@ -1,0 +1,75 @@
+@import './variables.scss';
+
+.calendar {
+  width: 100%;
+  padding: 15px;
+  position: fixed;
+  top: -350px;
+  left: 0;
+  background-color: $deep-1;
+  z-index: 1000;
+  .calendar-header {
+    width: 100%;
+    height: 30px;
+    .left,
+    .right {
+      width: 30px;
+      height: 30px;
+      background-color: $deep-2;
+      i {
+        color: $deep-6;
+      }
+      &:hover {
+        background-color: $deep-4;
+        i {
+          color: $light-2;
+        }
+      }
+    }
+    .display-date-text {
+      span {
+        line-height: 30px;
+      }
+    }
+  }
+  .calendar-content {
+    margin-top: 15px;
+    .calendar-table {
+      width: 100%;
+      th {
+        min-width: 30px;
+        height: 30px;
+        color: $deep-5;
+        padding: 8px 0;
+      }
+      td {
+        min-width: 30px;
+        height: 35px;
+        text-align: center;
+        .enable-date {
+          margin: 0 auto;
+          width: 30px;
+          height: 30px;
+          line-height: 30px;
+          color: $light-3;
+          border: 1px solid transparent;
+          &:hover {
+            color: $light-1;
+            background-color: $deep-4;
+          }
+        }
+        .date-today {
+          color: $blue-2;
+          border-color: $deep-4;
+        }
+        .cur-day {
+          color: $light-1 !important;
+          background-color: $blue-1 !important;
+        }
+      }
+    }
+  }
+}
+.calendar-active {
+  top: 30px;
+}

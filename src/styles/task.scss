@@ -1,0 +1,125 @@
+@import './variables.scss';
+
+.task-item {
+  border: 2px solid transparent;
+  margin-bottom: 6px;
+  .task-content {
+    border-radius: 2px;
+    padding: 15px 10px;
+    position: relative;
+    cursor: move;
+    min-height: 80px;
+    .content-header {
+      .content-title {
+        display: inline-block;
+        color: $light-2;
+        font-weight: 600;
+        width: calc(100% - 30px);
+      }
+      .menu-toggle {
+        width: 30px;
+        height: 30px;
+        position: relative;
+        .icon-menu {
+          color: $deep-6;
+          line-height: 30px;
+        }
+        &:hover {
+          background-color: $deep-3;
+          i {
+            color: $light-1;
+          }
+        }
+      }
+      .menu-toggle-active::before {
+        content: '';
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+      }
+    }
+    .content-description {
+      span {
+        display: inline-block;
+        color: $light-3;
+        word-break: normal;
+        white-space: pre-wrap;
+      }
+      .state-switcher {
+        width: 35px;
+        height: 25px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        border-radius: 4px 0 2px 0;
+        i {
+          color: $light-3;
+        }
+        .switcher-opts {
+          height: 25px;
+          padding: 0 4px;
+          background-color: $deep-3;
+          position: absolute;
+          right: calc(100% + 5px);
+          z-index: 1000;
+          .opts-item {
+            width: 35px;
+            line-height: 25px;
+            &:hover {
+              background-color: $deep-5;
+            }
+          }
+        }
+        &:hover {
+          & > i {
+            color: $light-1;
+          }
+        }
+      }
+      .state-switcher-active::before {
+        content: '';
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 500;
+      }
+    }
+  }
+  &:hover {
+    // border-color: $blue-1;
+  }
+}
+.to-do {
+  border-left: 4px solid $deep-4;
+  background-color: $deep-2;
+  .state-switcher {
+    background-color: $deep-4;
+    &:hover {
+      background-color: $deep-5;
+    }
+  }
+}
+.in-progress {
+  border-left: 4px solid $blue-1;
+  background-color: rgba(90, 83, 199, 0.2);
+  .state-switcher {
+    background-color: $blue-1;
+    &:hover {
+      background-color: $blue-2;
+    }
+  }
+}
+.accomplish {
+  border-left: 4px solid $green-1;
+  background-color: rgba(49, 148, 49, 0.2);
+  .state-switcher {
+    background-color: $green-1;
+    &:hover {
+      background-color: $green-2;
+    }
+  }
+}

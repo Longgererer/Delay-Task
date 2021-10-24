@@ -1,0 +1,60 @@
+@import './variables.scss';
+
+.task-form {
+  width: 100%;
+  padding: 20px 15px;
+  position: fixed;
+  bottom: -250px;
+  left: 0;
+  z-index: 1000;
+  background-color: $deep-1;
+  .task-title-input,
+  .task-description {
+    width: 100%;
+    color: $light-3;
+    background-color: $deep-3;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+  }
+  .task-description {
+    resize: none;
+    margin-top: 10px;
+    font-family: inherit;
+  }
+  .btn-grp {
+    margin-top: 15px;
+    .cancel-btn,
+    .save-btn {
+      border: none;
+      background-color: transparent;
+      border-radius: 4px;
+      padding: 5px 10px;
+      &:hover {
+        background-color: $deep-3;
+      }
+    }
+    .cancel-btn {
+      color: $deep-6;
+      &:hover {
+        color: $light-3;
+      }
+    }
+    .save-btn {
+      color: $blue-1;
+      &:hover {
+        color: $blue-2;
+      }
+    }
+    .save-btn[disabled] {
+      color: $deep-6 !important;
+      &:hover {
+        background-color: transparent !important;
+      }
+    }
+  }
+}
+
+.task-form-active {
+  bottom: 0;
+}

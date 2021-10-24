@@ -1,0 +1,45 @@
+@import './styles/variables.scss';
+@import './styles/common.scss';
+@import './icons/iconfont.css';
+
+* {
+  box-sizing: border-box;
+  color: $light-1;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $deep-1;
+}
+
+body {
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto;
+}
+
+.App {
+  width: 100%;
+  height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  outline: none;
+  background-color: $deep-1;
+}
+
+::-webkit-scrollbar,
+::-webkit-scrollbar-track {
+  background-color: $deep-1;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: $deep-3;
+}

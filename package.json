@@ -1,30 +1,41 @@
 {
   "name": "delay-task",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "main": "public/electron.js",
+  "homepage": "./",
+  "appId": "com.electron.delayTask",
+  "build": {
+    "productName": "delayTask",
+    "appId": "com.electron.delayTask",
+    "copyright": "Copyright © 2020 power by Longgererer",
+    "win": {
+      "icon": "static/icons/logo.ico"
+    },
+    "files": [
+      "node_modules/**/*",
+      "build/**/*",
+      "public/electron.js"
+    ],
+    "directories": {
+      "buildResources": "static",
+      "output": "build"
+    },
+    "extends": null
+  },
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
-    "web-vitals": "^1.0.1"
+    "electron-is-dev": "^2.0.0",
+    "electron-store": "^8.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "rescripts start",
+    "build": "rescripts build",
+    "test": "rescripts test",
     "eject": "react-scripts eject",
-    "dev": "concurrently \"wait-on http://localhost:3000 && electron .\" \"cross-env BROWSER=none npm start\"",
-    "electron-dev": "concurrently \"BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\""
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "dev": "concurrently \"cross-env BROWSER=none npm start\" \"electron .\"",
+    "postinstall": "electron-builder install-app-deps",
+    "pack-react": "yarn build",
+    "pack-electron": "electron-builder build"
   },
   "browserslist": {
     "production": [
@@ -39,11 +50,17 @@
     ]
   },
   "devDependencies": {
+    "@rescripts/cli": "^0.0.16",
+    "@rescripts/rescript-env": "^0.0.14",
+    "cross-env": "^7.0.3",
     "concurrently": "^6.3.0",
     "electron": "^15.2.0",
-    "electron-is-dev": "^2.0.0",
-    "node-sass": "^6.0.1",
-    "sass-loader": "^10.2.0",
-    "wait-on": "^6.0.0"
+    "electron-builder": "^22.13.1",
+    "is-electron": "^2.2.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.0.1",
+    "sass": "^1.43.2"
   }
 }
