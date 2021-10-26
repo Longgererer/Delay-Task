@@ -6,7 +6,7 @@
 
 <p align="center">An electron application to record your tasks everyday!</p>
 
-![1614658567_1_.png](http://picstore.lliiooiill.cn/delay-task-preview.png)
+![1614658567_1_.png](http://picstore.lliiooiill.cn/1635207693%281%29.jpg)
 
 ## Describe
 
